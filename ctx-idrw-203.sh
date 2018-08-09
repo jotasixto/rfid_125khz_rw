@@ -38,7 +38,7 @@ if [ $# -eq 0 ] || [ "$1" == "-h" ] ; then
 
 else
 
-  docker run --rm ctx_rfid/v1 ctx-idrw-203 $@ 
+  docker run --rm --privileged -v /dev/bus/usb:/dev/bus/usb ctx_rfid/v1 ctx-idrw-203 $@ 
 
 fi
 
